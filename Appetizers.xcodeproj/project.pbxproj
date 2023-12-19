@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC47CAC22B31EAE300830767 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC47CAC12B31EAE300830767 /* DetailView.swift */; };
 		ACB6F7C82B2D833D0024CF02 /* AppetizersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB6F7C72B2D833D0024CF02 /* AppetizersApp.swift */; };
 		ACB6F7CA2B2D833D0024CF02 /* AppetizerTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB6F7C92B2D833D0024CF02 /* AppetizerTabView.swift */; };
 		ACB6F7CC2B2D833E0024CF02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACB6F7CB2B2D833E0024CF02 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC47CAC12B31EAE300830767 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		ACB6F7C42B2D833D0024CF02 /* Appetizers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appetizers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB6F7C72B2D833D0024CF02 /* AppetizersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizersApp.swift; sourceTree = "<group>"; };
 		ACB6F7C92B2D833D0024CF02 /* AppetizerTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerTabView.swift; sourceTree = "<group>"; };
@@ -60,6 +62,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC47CAC32B31ED2A00830767 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				AC47CAC12B31EAE300830767 /* DetailView.swift */,
+				ACB6F7D62B2D83D90024CF02 /* AppetizerListView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		AC47CAC42B31ED4D00830767 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				ACB6F7D82B2D83E10024CF02 /* AccountView.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		AC47CAC52B31ED5200830767 /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				ACB6F7DA2B2D83EF0024CF02 /* OrderView.swift */,
+			);
+			path = Orders;
+			sourceTree = "<group>";
+		};
 		ACB6F7BB2B2D833C0024CF02 = {
 			isa = PBXGroup;
 			children = (
@@ -104,9 +131,9 @@
 		ACB6F7D52B2D83CC0024CF02 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				ACB6F7D62B2D83D90024CF02 /* AppetizerListView.swift */,
-				ACB6F7D82B2D83E10024CF02 /* AccountView.swift */,
-				ACB6F7DA2B2D83EF0024CF02 /* OrderView.swift */,
+				AC47CAC52B31ED5200830767 /* Orders */,
+				AC47CAC42B31ED4D00830767 /* Account */,
+				AC47CAC32B31ED2A00830767 /* Home */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -237,6 +264,7 @@
 			files = (
 				ACB6F7DE2B2F81A80024CF02 /* Appetizer.swift in Sources */,
 				ACF9520F2B31A600005F2317 /* Colors.swift in Sources */,
+				AC47CAC22B31EAE300830767 /* DetailView.swift in Sources */,
 				ACB6F7D92B2D83E10024CF02 /* AccountView.swift in Sources */,
 				ACF952022B30CAC2005F2317 /* Card.swift in Sources */,
 				ACF952152B31A6AF005F2317 /* String.swift in Sources */,
