@@ -12,12 +12,14 @@ final class AppetizerListViewModel: ObservableObject {
     @Published var appetizers: [Appetizer] = []
     @Published var isLoading: Bool = false
     @Published var alertItem: AlertItem?
-
+    
     func getAppetizers()  {
         isLoading = true
         
-        NetworkManager.shared.getAppetizers { result in
+        NetworkManager.shared.getAppetizers {result in
             DispatchQueue.main.async { [self] in
+                isLoading = false
+                
                 switch result {
                 case .success(let appetizers):
                     self.appetizers = appetizers
@@ -35,14 +37,11 @@ final class AppetizerListViewModel: ObservableObject {
                         
                     case .unableToComplete:
                         alertItem = AlertContext.unableToComplete
-
+                        
                     }
                 }
             }
-         
         }
-        
-        isLoading = false
     }
     
 }

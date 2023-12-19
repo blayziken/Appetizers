@@ -24,6 +24,7 @@
 		ACF952132B31A6A3005F2317 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF952122B31A6A3005F2317 /* Date.swift */; };
 		ACF952152B31A6AF005F2317 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF952142B31A6AF005F2317 /* String.swift */; };
 		ACF952172B31A721005F2317 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF952162B31A721005F2317 /* LoadingView.swift */; };
+		ACF952192B31AF53005F2317 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF952182B31AF53005F2317 /* RemoteImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		ACF952122B31A6A3005F2317 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		ACF952142B31A6AF005F2317 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		ACF952162B31A721005F2317 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		ACF952182B31AF53005F2317 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				ACF952112B31A693005F2317 /* Extensions */,
 				ACF9520C2B30EFE6005F2317 /* Alert.swift */,
 				ACF952162B31A721005F2317 /* LoadingView.swift */,
+				ACF952182B31AF53005F2317 /* RemoteImage.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				ACF952172B31A721005F2317 /* LoadingView.swift in Sources */,
 				ACB6F7C82B2D833D0024CF02 /* AppetizersApp.swift in Sources */,
 				ACF952082B30CE06005F2317 /* NetworkError.swift in Sources */,
+				ACF952192B31AF53005F2317 /* RemoteImage.swift in Sources */,
 				ACF9520D2B30EFE6005F2317 /* Alert.swift in Sources */,
 				ACB6F7D72B2D83D90024CF02 /* AppetizerListView.swift in Sources */,
 				ACF952132B31A6A3005F2317 /* Date.swift in Sources */,

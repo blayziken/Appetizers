@@ -13,31 +13,33 @@ struct AppetizerListView: View {
     
     var body: some View {
         
-        if appetizerListVM.isLoading == true {
-            LoadingView()
-        } else {
+        ZStack {
             NavigationView {
                 List(appetizerListVM.appetizers) { appetizer in
-                   AppetizerCard(appetizer: appetizer)
+                    AppetizerCard(appetizer: appetizer)
                 }
-                    .navigationTitle("Appetizers")
+                .navigationTitle("Appetizers")
             }
             .onAppear {
                 appetizerListVM.getAppetizers()
             }
-            .alert(item: $appetizerListVM.alertItem) { alertItem in
-                Alert(
-                    title: alertItem.title,
-                    message: alertItem.message,
-                    dismissButton: alertItem.dismissButton
-                )
-            }
-        }
             
-      
+            if appetizerListVM.isLoading == true {
+                LoadingView()
+            }
+            
+        }
+        .alert(item: $appetizerListVM.alertItem) { alertItem in
+            Alert(
+                title: alertItem.title,
+                message: alertItem.message,
+                dismissButton: alertItem.dismissButton
+            )
+        }
+        
     }
     
-
+    
 }
 
 struct AppetizerListView_Previews: PreviewProvider {
