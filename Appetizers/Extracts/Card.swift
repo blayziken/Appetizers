@@ -22,7 +22,7 @@ struct AppetizerCard: View {
             
             VStack(alignment: .leading, spacing:5) {
                 Text(appetizer.name)
-                    .font(.title2)
+                    .font(.title3)
                     .fontWeight(.medium)
                     
                 

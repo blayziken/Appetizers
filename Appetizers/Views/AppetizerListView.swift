@@ -8,16 +8,36 @@
 import SwiftUI
 
 struct AppetizerListView: View {
+    
+    @StateObject var appetizerListVM = AppetizerListViewModel()
+    
     var body: some View {
-        NavigationView {
-            List(MockData.appetizers) { appetizer in
-//                Text(appetizer.name)
-               AppetizerCard(appetizer: appetizer)
+        
+        if appetizerListVM.isLoading == true {
+            LoadingView()
+        } else {
+            NavigationView {
+                List(appetizerListVM.appetizers) { appetizer in
+                   AppetizerCard(appetizer: appetizer)
+                }
+                    .navigationTitle("Appetizers")
             }
-                .navigationTitle("Appetizers")
-
+            .onAppear {
+                appetizerListVM.getAppetizers()
+            }
+            .alert(item: $appetizerListVM.alertItem) { alertItem in
+                Alert(
+                    title: alertItem.title,
+                    message: alertItem.message,
+                    dismissButton: alertItem.dismissButton
+                )
+            }
         }
+            
+      
     }
+    
+
 }
 
 struct AppetizerListView_Previews: PreviewProvider {
