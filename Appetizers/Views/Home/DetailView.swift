@@ -47,8 +47,9 @@ struct DetailView: View {
                     Text("$\(appetizer.price, specifier: "%.2f") - Add to Order")
                 }
                 //                .modifier(StandardButtonStyle())
-                .buttonStyle(.borderedProminent)
+                .buttonStyle(.bordered)
                 .controlSize(.large)
+                .tint(.brandPrimary)
                 .padding(.bottom, 30)
             }
         }
