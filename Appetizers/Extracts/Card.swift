@@ -13,11 +13,27 @@ struct AppetizerCard: View {
     
     var body: some View {
         HStack {
-            AppetizerRemoteImage(urlString: appetizer.imageURL)
-                .aspectRatio(contentMode: .fill)
-                .frame( width: 120, height: 90)
-                .cornerRadius(8)
-                 
+//            AppetizerRemoteImage(urlString: appetizer.imageURL)
+//                .aspectRatio(contentMode: .fill)
+//                .frame( width: 120, height: 90)
+//                .cornerRadius(8)
+//                 
+            
+            // NOTE: IF CACHING IS IMPORTANT, DON'T USE ASYNC IMAGE
+            
+            AsyncImage(url: URL(string: appetizer.imageURL)) { image in
+                image
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 120, height: 90)
+                    .cornerRadius(8)
+            } placeholder: {
+                Image("no-image")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 120, height: 90)
+                    .cornerRadius(8)
+            }
             
             VStack(alignment: .leading, spacing:5) {
                 Text(appetizer.name)
