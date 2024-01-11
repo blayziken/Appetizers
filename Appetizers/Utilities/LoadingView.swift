@@ -14,7 +14,8 @@ struct LoadingView: View {
                 .edgesIgnoringSafeArea(.all)
             
             ProgressView()
-                .controlSize(.large)
+//                .controlSize(.large)
+                .scaleEffect(2)
                 .tint(.brandPrimary)
         }
     }
