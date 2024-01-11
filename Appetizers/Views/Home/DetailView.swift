@@ -8,17 +8,21 @@
 import SwiftUI
 
 struct DetailView: View {
-    let appetizer: Appetizer
+    @EnvironmentObject var order: Order
     
+    let appetizer: Appetizer
+    @Binding var isShowingDetail: Bool
+
     var body: some View {
         VStack {
             AppetizerRemoteImage(urlString: appetizer.imageURL)
-                .aspectRatio(contentMode: .fit)
+                .aspectRatio(contentMode: .fill)
                 .frame(width: 320, height: 225)
-                .background(.red)
-            
+//                .background(.red)
             
             VStack {
+                Spacer()
+                    .frame(height: 15)
                 Text(appetizer.name)
                     .font(.title2)
                     .fontWeight(.semibold)
@@ -36,7 +40,8 @@ struct DetailView: View {
                 Spacer()
                 
                 Button {
-                    
+                    order.add(appetizer)
+                    isShowingDetail = false
                 }label: {
                     
                     Text("$\(appetizer.price, specifier: "%.2f") - Add to Order")
@@ -47,13 +52,13 @@ struct DetailView: View {
                 .padding(.bottom, 30)
             }
         }
-        .frame(width: 320, height: 525)
+        .frame(width: 320, height: 520)
         .background(Color(.systemBackground))
         .cornerRadius(12)
         .shadow(radius: 40)
         .overlay(alignment: .topTrailing) {
             Button {
-                
+                isShowingDetail = false
             } label: {
                 XDismissButton()
             }
@@ -63,7 +68,7 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(appetizer: MockData.sample)
+        DetailView(appetizer: MockData.sample, isShowingDetail: .constant(true))
     }
 }
 

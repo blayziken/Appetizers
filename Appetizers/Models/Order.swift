@@ -7,12 +7,22 @@
 
 import SwiftUI
 
-struct Order: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+final class Order: ObservableObject {
+    
+    @Published var items: [Appetizer] = []
+    
+    
+    var totalPrice: Double {
+        items.reduce(0) { $0 + $1.price }
     }
-}
-
-#Preview {
-    Order()
+    
+    
+    func add(_ appetizer: Appetizer) {
+        items.append(appetizer)
+    } 
+    
+    
+    func deleteItems(at offsets: IndexSet) {
+        items.remove(atOffsets: offsets)
+    }
 }

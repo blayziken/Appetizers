@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC1974152B3DA929008D2197 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1974142B3DA928008D2197 /* User.swift */; };
 		AC47CAC22B31EAE300830767 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC47CAC12B31EAE300830767 /* DetailView.swift */; };
+		AC65EEAA2B34D8160057490B /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC65EEA92B34D8160057490B /* AccountViewModel.swift */; };
+		AC9941222B4F9546003873B4 /* EmptyStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9941212B4F9546003873B4 /* EmptyStates.swift */; };
+		AC9941242B4F98D1003873B4 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9941232B4F98D1003873B4 /* Order.swift */; };
 		ACB6F7C82B2D833D0024CF02 /* AppetizersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB6F7C72B2D833D0024CF02 /* AppetizersApp.swift */; };
 		ACB6F7CA2B2D833D0024CF02 /* AppetizerTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB6F7C92B2D833D0024CF02 /* AppetizerTabView.swift */; };
 		ACB6F7CC2B2D833E0024CF02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACB6F7CB2B2D833E0024CF02 /* Assets.xcassets */; };
@@ -29,7 +33,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC1974142B3DA928008D2197 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AC47CAC12B31EAE300830767 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		AC65EEA92B34D8160057490B /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		AC9941212B4F9546003873B4 /* EmptyStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStates.swift; sourceTree = "<group>"; };
+		AC9941232B4F98D1003873B4 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		ACB6F7C42B2D833D0024CF02 /* Appetizers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appetizers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB6F7C72B2D833D0024CF02 /* AppetizersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizersApp.swift; sourceTree = "<group>"; };
 		ACB6F7C92B2D833D0024CF02 /* AppetizerTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerTabView.swift; sourceTree = "<group>"; };
@@ -75,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				ACB6F7D82B2D83E10024CF02 /* AccountView.swift */,
+				AC65EEA92B34D8160057490B /* AccountViewModel.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -142,6 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				ACB6F7DD2B2F81A80024CF02 /* Appetizer.swift */,
+				AC1974142B3DA928008D2197 /* User.swift */,
+				AC9941232B4F98D1003873B4 /* Order.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -178,6 +189,7 @@
 				ACF9520C2B30EFE6005F2317 /* Alert.swift */,
 				ACF952162B31A721005F2317 /* LoadingView.swift */,
 				ACF952182B31AF53005F2317 /* RemoteImage.swift */,
+				AC9941212B4F9546003873B4 /* EmptyStates.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -220,7 +232,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1510;
 				TargetAttributes = {
 					ACB6F7C32B2D833C0024CF02 = {
 						CreatedOnToolsVersion = 14.2;
@@ -266,8 +278,11 @@
 				ACF9520F2B31A600005F2317 /* Colors.swift in Sources */,
 				AC47CAC22B31EAE300830767 /* DetailView.swift in Sources */,
 				ACB6F7D92B2D83E10024CF02 /* AccountView.swift in Sources */,
+				AC65EEAA2B34D8160057490B /* AccountViewModel.swift in Sources */,
 				ACF952022B30CAC2005F2317 /* Card.swift in Sources */,
+				AC9941242B4F98D1003873B4 /* Order.swift in Sources */,
 				ACF952152B31A6AF005F2317 /* String.swift in Sources */,
+				AC9941222B4F9546003873B4 /* EmptyStates.swift in Sources */,
 				ACF9520B2B30EA46005F2317 /* AppetizerListViewModel.swift in Sources */,
 				ACB6F7CA2B2D833D0024CF02 /* AppetizerTabView.swift in Sources */,
 				ACF952062B30CC96005F2317 /* NetworkManager.swift in Sources */,
@@ -279,6 +294,7 @@
 				ACB6F7D72B2D83D90024CF02 /* AppetizerListView.swift in Sources */,
 				ACF952132B31A6A3005F2317 /* Date.swift in Sources */,
 				ACB6F7DB2B2D83EF0024CF02 /* OrderView.swift in Sources */,
+				AC1974152B3DA929008D2197 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +337,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -381,6 +398,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
